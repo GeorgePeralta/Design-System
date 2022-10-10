@@ -1,1 +1,3 @@
-import {  } from '@peralta-ui/tokens'
+import { colors } from '@peralta-ui/tokens'
+
+console.log(colors)

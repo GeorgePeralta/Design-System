@@ -1,0 +1,4 @@
+/node_modules
+/.*rc
+/*.json
+/*.lock

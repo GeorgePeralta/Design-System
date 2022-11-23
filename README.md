@@ -1,15 +1,15 @@
 # Components
 
-- [x] Text
-- [x] Heading
+- [x] Avatar
 - [x] Box
 - [x] Button
-- [x] TextInput
-- [x] TextArea
 - [x] CheckBox
-- [x] Avatar
+- [x] Heading
 - [x] MultiStep
-- [x] Toas
+- [x] Text
+- [x] TextArea
+- [x] TextInput
+- [x] Toast
 - [x] Tooltip
 
 [Peralta-UI](https://georgeperalta.github.io/Design-System/?path=/story/home--page)

@@ -1,0 +1,2 @@
+import{A as t}from"./index.27ff0f7a.js";import"./index.ef89ef90.js";import"./iframe.09200ffd.js";import"./index.3a0b9c76.js";import"./jsx-runtime.18820630.js";const i={title:"Data display/Avatar",component:t,args:{src:"https://github.com/GeorgePeralta.png",alt:"George Peralta"},argTypes:{src:{control:{type:"text"}}}},p={},c={args:{src:void 0}},l=["Primary","WithFallback"];export{p as Primary,c as WithFallback,l as __namedExportsOrder,i as default};
+//# sourceMappingURL=Avatar.stories.667c889b.js.map

@@ -1,166 +1,3 @@
-// ../tokens/dist/index.mjs
-var colors = {
-  white: "#FFFFFF",
-  black: "#000000",
-  gray100: "#E1E1E6",
-  gray200: "#A9A9B2",
-  gray400: "#7C7C8A",
-  gray500: "#505059",
-  gray600: "#323238",
-  gray700: "#29292E",
-  gray800: "#202024",
-  gray900: "#121214",
-  ignite300: "#00B37E",
-  ignite500: "#00875F",
-  ignite700: "#015F43",
-  ignite900: "#00291D"
-};
-var space = {
-  1: "0.25rem",
-  2: "0.5rem",
-  3: "0.75rem",
-  4: "1rem",
-  5: "1.25rem",
-  6: "1.5rem",
-  7: "1.75rem",
-  8: "2rem",
-  10: "2.5rem",
-  12: "3rem",
-  16: "4rem",
-  20: "5rem",
-  40: "10rem",
-  64: "16rem",
-  80: "20rem"
-};
-var radii = {
-  px: "1px",
-  xs: "4px",
-  sm: "6px",
-  md: "8px",
-  lg: "16px",
-  full: "99999px"
-};
-var fonts = {
-  default: "Roboto, sans-serif",
-  code: "monospace"
-};
-var fontSizes = {
-  xxs: "0.625rem",
-  xs: "0.75rem",
-  sm: "0.875rem",
-  md: "1rem",
-  lg: "1.125rem",
-  xl: "1.25rem",
-  "2xl": "1.5rem",
-  "4xl": "2rem",
-  "5xl": "2.25rem",
-  "6xl": "3rem",
-  "7xl": "4rem",
-  "8xl": "4.5rem",
-  "9xl": "6rem"
-};
-var fontWeights = {
-  regular: "400",
-  medium: "500",
-  bold: "700"
-};
-var lineHeights = {
-  shorter: "125%",
-  short: "140%",
-  base: "160%",
-  tall: "180%"
-};
-
-// src/styles/index.ts
-import { createStitches, defaultThemeMap } from "@stitches/react";
-var {
-  styled,
-  css,
-  globalCss,
-  keyframes,
-  getCssText,
-  theme,
-  createTheme,
-  config
-} = createStitches({
-  themeMap: {
-    ...defaultThemeMap,
-    height: "space",
-    width: "space"
-  },
-  theme: {
-    colors,
-    fontSizes,
-    fontWeights,
-    fonts,
-    lineHeights,
-    radii,
-    space
-  }
-});
-
-// src/components/Box.tsx
-var Box = styled("div", {
-  padding: "$4",
-  borderRadius: "$md",
-  backgroundColor: "$gray800",
-  border: "1px solid $gray600"
-});
-Box.displayName = "Box";
-
-// src/components/Text.tsx
-var Text = styled("p", {
-  fontFamily: "$default",
-  lineHeight: "$base",
-  margin: 0,
-  color: "$gray100",
-  variants: {
-    size: {
-      xxs: { fontSize: "$xxs" },
-      xs: { fontSize: "$xs" },
-      sm: { fontSize: "$sm" },
-      md: { fontSize: "$md" },
-      lg: { fontSize: "$lg" },
-      xl: { fontSize: "$xl" },
-      "2xl": { fontSize: "$2xl" },
-      "4xl": { fontSize: "$4xl" },
-      "5xl": { fontSize: "$5xl" },
-      "6xl": { fontSize: "$6xl" },
-      "7xl": { fontSize: "$7xl" },
-      "8xl": { fontSize: "$8xl" },
-      "9xl": { fontSize: "$9xl" }
-    }
-  },
-  defaultVariants: {
-    size: "md"
-  }
-});
-Text.displayName = "Text";
-
-// src/components/Heading.tsx
-var Heading = styled("h2", {
-  fontFamily: "$default",
-  lineHeight: "$shorter",
-  margin: 0,
-  color: "$gray100",
-  variants: {
-    size: {
-      sm: { fontSize: "$xl" },
-      md: { fontSize: "$2xl" },
-      lg: { fontSize: "$4xl" },
-      "2xl": { fontSize: "$5xl" },
-      "3xl": { fontSize: "$6xl" },
-      "4xl": { fontSize: "$7xl" },
-      "5xl": { fontSize: "$8xl" },
-      "6xl": { fontSize: "$9xl" }
-    }
-  },
-  defaultVariants: {
-    size: "md"
-  }
-});
-Heading.displayName = "Heading";
-
 // ../../node_modules/phosphor-react/dist/lib/index.esm.js
 import { createContext } from "react";
 var IconContext = /* @__PURE__ */ createContext({
@@ -169,8 +6,8 @@ var IconContext = /* @__PURE__ */ createContext({
   weight: "regular",
   mirrored: false
 });
-var renderPathForWeight = function renderPathForWeight2(weight, color, pathsByWeight3) {
-  var path = pathsByWeight3.get(weight);
+var renderPathForWeight = function renderPathForWeight2(weight, color, pathsByWeight4) {
+  var path = pathsByWeight4.get(weight);
   if (!!path)
     return path(color);
   console.error('Unsupported icon weight. Choose from "thin", "light", "regular", "bold", "fill", or "duotone".');
@@ -198,7 +35,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
 // ../../node_modules/phosphor-react/dist/lib/IconBase.esm.js
 var IconBase = /* @__PURE__ */ forwardRef(function(props, ref) {
-  var alt = props.alt, color = props.color, size = props.size, weight = props.weight, mirrored = props.mirrored, children = props.children, renderPath5 = props.renderPath, restProps = _objectWithoutPropertiesLoose(props, ["alt", "color", "size", "weight", "mirrored", "children", "renderPath"]);
+  var alt = props.alt, color = props.color, size = props.size, weight = props.weight, mirrored = props.mirrored, children = props.children, renderPath7 = props.renderPath, restProps = _objectWithoutPropertiesLoose(props, ["alt", "color", "size", "weight", "mirrored", "children", "renderPath"]);
   var _useContext = useContext(IconContext), _useContext$color = _useContext.color, contextColor = _useContext$color === void 0 ? "currentColor" : _useContext$color, contextSize = _useContext.size, _useContext$weight = _useContext.weight, contextWeight = _useContext$weight === void 0 ? "regular" : _useContext$weight, _useContext$mirrored = _useContext.mirrored, contextMirrored = _useContext$mirrored === void 0 ? false : _useContext$mirrored, restContext = _objectWithoutPropertiesLoose(_useContext, ["color", "size", "weight", "mirrored"]);
   return React.createElement("svg", Object.assign({
     ref,
@@ -212,7 +49,7 @@ var IconBase = /* @__PURE__ */ forwardRef(function(props, ref) {
     width: "256",
     height: "256",
     fill: "none"
-  }), renderPath5(weight != null ? weight : contextWeight, color != null ? color : contextColor));
+  }), renderPath7(weight != null ? weight : contextWeight, color != null ? color : contextColor));
 });
 IconBase.displayName = "IconBase";
 var IconBase_esm_default = IconBase;
@@ -407,8 +244,244 @@ var User = /* @__PURE__ */ forwardRef3(function(props, ref) {
 User.displayName = "User";
 var User_esm_default = User;
 
+// ../../node_modules/phosphor-react/dist/icons/X.esm.js
+import React4, { forwardRef as forwardRef4 } from "react";
+var pathsByWeight3 = /* @__PURE__ */ new Map();
+pathsByWeight3.set("bold", function(color) {
+  return React4.createElement(React4.Fragment, null, React4.createElement("line", {
+    x1: "200",
+    y1: "56",
+    x2: "56",
+    y2: "200",
+    fill: "none",
+    stroke: color,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "24"
+  }), React4.createElement("line", {
+    x1: "200",
+    y1: "200",
+    x2: "56",
+    y2: "56",
+    fill: "none",
+    stroke: color,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "24"
+  }));
+});
+pathsByWeight3.set("duotone", function(color) {
+  return React4.createElement(React4.Fragment, null, React4.createElement("line", {
+    x1: "200",
+    y1: "56",
+    x2: "56",
+    y2: "200",
+    stroke: color,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "16"
+  }), React4.createElement("line", {
+    x1: "200",
+    y1: "200",
+    x2: "56",
+    y2: "56",
+    stroke: color,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "16"
+  }));
+});
+pathsByWeight3.set("fill", function() {
+  return React4.createElement(React4.Fragment, null, React4.createElement("path", {
+    d: "M139.3,128l66.4-66.3a8.1,8.1,0,0,0-11.4-11.4L128,116.7,61.7,50.3A8.1,8.1,0,0,0,50.3,61.7L116.7,128,50.3,194.3a8.1,8.1,0,0,0,0,11.4,8.2,8.2,0,0,0,11.4,0L128,139.3l66.3,66.4a8.2,8.2,0,0,0,11.4,0,8.1,8.1,0,0,0,0-11.4Z"
+  }));
+});
+pathsByWeight3.set("light", function(color) {
+  return React4.createElement(React4.Fragment, null, React4.createElement("line", {
+    x1: "200",
+    y1: "56",
+    x2: "56",
+    y2: "200",
+    fill: "none",
+    stroke: color,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "12"
+  }), React4.createElement("line", {
+    x1: "200",
+    y1: "200",
+    x2: "56",
+    y2: "56",
+    fill: "none",
+    stroke: color,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "12"
+  }));
+});
+pathsByWeight3.set("thin", function(color) {
+  return React4.createElement(React4.Fragment, null, React4.createElement("line", {
+    x1: "200",
+    y1: "56",
+    x2: "56",
+    y2: "200",
+    fill: "none",
+    stroke: color,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "8"
+  }), React4.createElement("line", {
+    x1: "200",
+    y1: "200",
+    x2: "56",
+    y2: "56",
+    fill: "none",
+    stroke: color,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "8"
+  }));
+});
+pathsByWeight3.set("regular", function(color) {
+  return React4.createElement(React4.Fragment, null, React4.createElement("line", {
+    x1: "200",
+    y1: "56",
+    x2: "56",
+    y2: "200",
+    stroke: color,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "16"
+  }), React4.createElement("line", {
+    x1: "200",
+    y1: "200",
+    x2: "56",
+    y2: "56",
+    stroke: color,
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    strokeWidth: "16"
+  }));
+});
+var renderPath5 = function renderPath6(weight, color) {
+  return renderPathForWeight(weight, color, pathsByWeight3);
+};
+var X = /* @__PURE__ */ forwardRef4(function(props, ref) {
+  return React4.createElement(IconBase_esm_default, Object.assign({
+    ref
+  }, props, {
+    renderPath: renderPath5
+  }));
+});
+X.displayName = "X";
+var X_esm_default = X;
+
 // src/components/Avatar/styles.ts
 import * as Avatar from "@radix-ui/react-avatar";
+
+// ../tokens/dist/index.mjs
+var colors = {
+  white: "#FFFFFF",
+  black: "#000000",
+  gray100: "#E1E1E6",
+  gray200: "#A9A9B2",
+  gray400: "#7C7C8A",
+  gray500: "#505059",
+  gray600: "#323238",
+  gray700: "#29292E",
+  gray800: "#202024",
+  gray900: "#121214",
+  ignite300: "#00B37E",
+  ignite500: "#00875F",
+  ignite700: "#015F43",
+  ignite900: "#00291D",
+  peralta500: "#763ec6"
+};
+var space = {
+  1: "0.25rem",
+  2: "0.5rem",
+  3: "0.75rem",
+  4: "1rem",
+  5: "1.25rem",
+  6: "1.5rem",
+  7: "1.75rem",
+  8: "2rem",
+  10: "2.5rem",
+  12: "3rem",
+  16: "4rem",
+  20: "5rem",
+  40: "10rem",
+  64: "16rem",
+  80: "20rem"
+};
+var radii = {
+  px: "1px",
+  xs: "4px",
+  sm: "6px",
+  md: "8px",
+  lg: "16px",
+  full: "99999px"
+};
+var fonts = {
+  default: "Roboto, sans-serif",
+  code: "monospace"
+};
+var fontSizes = {
+  xxs: "0.625rem",
+  xs: "0.75rem",
+  sm: "0.875rem",
+  md: "1rem",
+  lg: "1.125rem",
+  xl: "1.25rem",
+  "2xl": "1.5rem",
+  "4xl": "2rem",
+  "5xl": "2.25rem",
+  "6xl": "3rem",
+  "7xl": "4rem",
+  "8xl": "4.5rem",
+  "9xl": "6rem"
+};
+var fontWeights = {
+  regular: "400",
+  medium: "500",
+  bold: "700"
+};
+var lineHeights = {
+  shorter: "125%",
+  short: "140%",
+  base: "160%",
+  tall: "180%"
+};
+
+// src/styles/index.ts
+import { createStitches, defaultThemeMap } from "@stitches/react";
+var {
+  styled,
+  css,
+  globalCss,
+  keyframes,
+  getCssText,
+  theme,
+  createTheme,
+  config
+} = createStitches({
+  themeMap: {
+    ...defaultThemeMap,
+    height: "space",
+    width: "space"
+  },
+  theme: {
+    colors,
+    fontSizes,
+    fontWeights,
+    fonts,
+    lineHeights,
+    radii,
+    space
+  }
+});
+
+// src/components/Avatar/styles.ts
 var AvatarContainer = styled(Avatar.Root, {
   borderRadius: "$full",
   display: "inline-block",
@@ -452,6 +525,15 @@ function Avatar2(props) {
   });
 }
 Avatar2.displayName = "Avatar";
+
+// src/components/Box.tsx
+var Box = styled("div", {
+  padding: "$4",
+  borderRadius: "$md",
+  backgroundColor: "$gray800",
+  border: "1px solid $gray600"
+});
+Box.displayName = "Box";
 
 // src/components/Button.tsx
 var Button = styled("button", {
@@ -526,6 +608,176 @@ var Button = styled("button", {
 });
 Button.displayName = "Button";
 
+// src/components/CheckBox/styles.ts
+import * as Checkbox from "@radix-ui/react-checkbox";
+var CheckBoxContainer = styled(Checkbox.Root, {
+  all: "unset",
+  width: "$6",
+  height: "$6",
+  backgroundColor: "$gray900",
+  borderRadius: "$xs",
+  lineHeight: 0,
+  cursor: "pointer",
+  overflow: "hidden",
+  boxSizing: "border-box",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  border: "2px solid $gray900",
+  '&[data-state="checked"]': {
+    backgroundColor: "$ignite300"
+  },
+  "&:focus": {
+    border: "2px solid $ignite300"
+  }
+});
+var slideIn = keyframes({
+  from: {
+    transform: "translateY(-100%)"
+  },
+  to: {
+    transform: "translateY(0)"
+  }
+});
+var slideOut = keyframes({
+  from: {
+    transform: "translateY(0)"
+  },
+  to: {
+    transform: "translateY(-100%)"
+  }
+});
+var CheckBoxIndicator = styled(Checkbox.Indicator, {
+  color: "White",
+  width: "$4",
+  height: "$4",
+  '&[data-state="checked"]': {
+    animation: `${slideIn} 200ms ease-out`
+  },
+  '&[data-state="unchecked"]': {
+    animation: `${slideOut} 200ms ease-out`
+  }
+});
+
+// src/components/CheckBox/index.tsx
+import { jsx as jsx2 } from "react/jsx-runtime";
+function Checkbox2(props) {
+  return /* @__PURE__ */ jsx2(CheckBoxContainer, {
+    ...props,
+    children: /* @__PURE__ */ jsx2(CheckBoxIndicator, {
+      asChild: true,
+      children: /* @__PURE__ */ jsx2(Check_esm_default, {
+        weight: "bold"
+      })
+    })
+  });
+}
+Checkbox2.displayName = "Checkbox";
+
+// src/components/Heading.tsx
+var Heading = styled("h2", {
+  fontFamily: "$default",
+  lineHeight: "$shorter",
+  margin: 0,
+  color: "$gray100",
+  variants: {
+    size: {
+      sm: { fontSize: "$xl" },
+      md: { fontSize: "$2xl" },
+      lg: { fontSize: "$4xl" },
+      "2xl": { fontSize: "$5xl" },
+      "3xl": { fontSize: "$6xl" },
+      "4xl": { fontSize: "$7xl" },
+      "5xl": { fontSize: "$8xl" },
+      "6xl": { fontSize: "$9xl" }
+    }
+  },
+  defaultVariants: {
+    size: "md"
+  }
+});
+Heading.displayName = "Heading";
+
+// src/components/Text.tsx
+var Text = styled("p", {
+  fontFamily: "$default",
+  lineHeight: "$base",
+  margin: 0,
+  color: "$gray100",
+  variants: {
+    size: {
+      xxs: { fontSize: "$xxs" },
+      xs: { fontSize: "$xs" },
+      sm: { fontSize: "$sm" },
+      md: { fontSize: "$md" },
+      lg: { fontSize: "$lg" },
+      xl: { fontSize: "$xl" },
+      "2xl": { fontSize: "$2xl" },
+      "4xl": { fontSize: "$4xl" },
+      "5xl": { fontSize: "$5xl" },
+      "6xl": { fontSize: "$6xl" },
+      "7xl": { fontSize: "$7xl" },
+      "8xl": { fontSize: "$8xl" },
+      "9xl": { fontSize: "$9xl" }
+    }
+  },
+  defaultVariants: {
+    size: "md"
+  }
+});
+Text.displayName = "Text";
+
+// src/components/MultiStep/styles.ts
+var MultiStepContainer = styled("div", {});
+var Label = styled(Text, {
+  color: "$gray200",
+  defaultVariants: {
+    size: "$xs"
+  }
+});
+var Steps = styled("div", {
+  display: "grid",
+  gridTemplateColumns: "repeat(var(--steps-size) ,1fr)",
+  gap: "$2",
+  marginTop: "$1"
+});
+var Step = styled("div", {
+  height: "$1",
+  borderRadius: "$px",
+  backgroundColor: "$gray600",
+  variants: {
+    active: {
+      true: {
+        backgroundColor: "$gray100"
+      }
+    }
+  }
+});
+
+// src/components/MultiStep/index.tsx
+import { jsx as jsx3, jsxs as jsxs2 } from "react/jsx-runtime";
+function MultiStep({ size, currentStep = 1 }) {
+  return /* @__PURE__ */ jsxs2(MultiStepContainer, {
+    children: [
+      /* @__PURE__ */ jsxs2(Label, {
+        children: [
+          "Passo ",
+          currentStep,
+          " de ",
+          size
+        ]
+      }),
+      /* @__PURE__ */ jsx3(Steps, {
+        css: { "--steps-size": size },
+        children: Array.from({ length: size }, (_, i) => i + 1).map((step) => /* @__PURE__ */ jsx3(Step, {
+          active: currentStep >= step
+        }, step))
+      })
+    ]
+  });
+}
+MultiStep.displayName = "MultiStep";
+
 // src/components/TextArea.tsx
 var TextArea = styled("textarea", {
   backgroundColor: "$gray900",
@@ -596,16 +848,16 @@ var Input = styled("input", {
 });
 
 // src/components/TextInput/index.tsx
-import { jsx as jsx2, jsxs as jsxs2 } from "react/jsx-runtime";
+import { jsx as jsx4, jsxs as jsxs3 } from "react/jsx-runtime";
 function TextInput({ prefix, ...props }) {
   const isDisabled = props.disabled;
-  return /* @__PURE__ */ jsxs2(TextInputContainer, {
+  return /* @__PURE__ */ jsxs3(TextInputContainer, {
     className: isDisabled ? "disabled" : "",
     children: [
-      !!prefix && /* @__PURE__ */ jsx2(Prefix, {
+      !!prefix && /* @__PURE__ */ jsx4(Prefix, {
         children: prefix
       }),
-      /* @__PURE__ */ jsx2(Input, {
+      /* @__PURE__ */ jsx4(Input, {
         ...props
       })
     ]
@@ -613,122 +865,158 @@ function TextInput({ prefix, ...props }) {
 }
 TextInput.displayName = "TextInput";
 
-// src/components/CheckBox/styles.ts
-import * as Checkbox from "@radix-ui/react-checkbox";
-var CheckBoxContainer = styled(Checkbox.Root, {
-  all: "unset",
-  width: "$6",
-  height: "$6",
-  backgroundColor: "$gray900",
-  borderRadius: "$xs",
-  lineHeight: 0,
-  cursor: "pointer",
-  overflow: "hidden",
-  boxSizing: "border-box",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  border: "2px solid $gray900",
-  '&[data-state="checked"]': {
-    backgroundColor: "$ignite300"
-  },
-  "&:focus": {
-    border: "2px solid $ignite300"
-  }
-});
-var slideIn = keyframes({
-  from: {
-    transform: "translateY(-100%)"
-  },
-  to: {
-    transform: "translateY(0)"
-  }
-});
-var slideOut = keyframes({
-  from: {
-    transform: "translateY(0)"
-  },
-  to: {
-    transform: "translateY(-100%)"
-  }
-});
-var CheckBoxIndicator = styled(Checkbox.Indicator, {
-  color: "White",
-  width: "$4",
-  height: "$4",
-  '&[data-state="checked"]': {
-    animation: `${slideIn} 200ms ease-out`
-  },
-  '&[data-state="unchecked"]': {
-    animation: `${slideOut} 200ms ease-out`
-  }
-});
+// src/components/Toast/index.tsx
+import * as ToastPrimitive from "@radix-ui/react-toast";
 
-// src/components/CheckBox/index.tsx
-import { jsx as jsx3 } from "react/jsx-runtime";
-function Checkbox2(props) {
-  return /* @__PURE__ */ jsx3(CheckBoxContainer, {
-    ...props,
-    children: /* @__PURE__ */ jsx3(CheckBoxIndicator, {
-      asChild: true,
-      children: /* @__PURE__ */ jsx3(Check_esm_default, {
-        weight: "bold"
-      })
-    })
-  });
-}
-Checkbox2.displayName = "Checkbox";
-
-// src/components/MultiStep/styles.ts
-var MultiStepContainer = styled("div", {});
-var Label = styled(Text, {
-  color: "$gray200",
-  defaultVariants: {
-    size: "$xs"
-  }
+// src/components/Toast/styles.ts
+import * as Toast from "@radix-ui/react-toast";
+var VIEWPORT_PADDING = 32;
+var hide = keyframes({
+  "0%": { opacity: 1 },
+  "100%": { opacity: 0 }
 });
-var Steps = styled("div", {
-  display: "grid",
-  gridTemplateColumns: "repeat(var(--steps-size) ,1fr)",
-  gap: "$2",
-  marginTop: "$1"
+var slideIn2 = keyframes({
+  from: { transform: `translateX(calc(100% + ${VIEWPORT_PADDING}px))` },
+  to: { transform: "translateX(0)" }
 });
-var Step = styled("div", {
-  height: "$1",
-  borderRadius: "$px",
-  backgroundColor: "$gray600",
-  variants: {
-    active: {
-      true: {
-        backgroundColor: "$gray100"
-      }
+var swipeOut = keyframes({
+  from: { transform: "translateX(var(--radix-toast-swipe-end-x))" },
+  to: { transform: `translateX(calc(100% + ${VIEWPORT_PADDING}px))` }
+});
+var ToastRoot = styled(Toast.Root, {
+  padding: "$3 $4",
+  background: "$gray800",
+  border: "1px solid $gray600",
+  borderRadius: "$sm",
+  fontFamily: "$default",
+  position: "relative",
+  "@media (prefers-reduced-motion: no-preference)": {
+    '&[data-state="open"]': {
+      animation: `${slideIn2} 150ms cubic-bezier(0.16, 1, 0.3, 1)`
+    },
+    '&[data-state="closed"]': {
+      animation: `${hide} 100ms ease-in`
+    },
+    '&[data-swipe="move"]': {
+      transform: "translateX(var(--radix-toast-swipe-move-x))"
+    },
+    '&[data-swipe="cancel"]': {
+      transform: "translateX(0)",
+      transition: "transform 200ms ease-out"
+    },
+    '&[data-swipe="end"]': {
+      animation: `${swipeOut} 100ms ease-out`
     }
   }
 });
+var ToastTitle = styled(Toast.Title, {
+  color: "$white",
+  fontWeight: "$bold",
+  fontSize: "$xl",
+  lineHeight: "$base"
+});
+var ToastDescription = styled(Toast.Description, {
+  color: "$gray200",
+  fontSize: "$sm",
+  lineHeight: "$base",
+  marginTop: "$1"
+});
+var ToastClose = styled(Toast.Close, {
+  position: "absolute",
+  top: "$4",
+  right: "$4",
+  background: "none",
+  border: "none",
+  color: "$gray200",
+  cursor: "pointer"
+});
+var ToastViewPort = styled(Toast.Viewport, {
+  position: "fixed",
+  bottom: 0,
+  right: 0,
+  display: "flex",
+  flexDirection: "column",
+  padding: VIEWPORT_PADDING,
+  gap: 10,
+  width: 390,
+  maxWidth: "100vw",
+  margin: 0,
+  listStyle: "none",
+  zIndex: 2147483647,
+  outline: "none"
+});
 
-// src/components/MultiStep/index.tsx
-import { jsx as jsx4, jsxs as jsxs3 } from "react/jsx-runtime";
-function MultiStep({ size, currentStep = 1 }) {
-  return /* @__PURE__ */ jsxs3(MultiStepContainer, {
+// src/components/Toast/index.tsx
+import { jsx as jsx5, jsxs as jsxs4 } from "react/jsx-runtime";
+function Toast2({ title, description, ...props }) {
+  return /* @__PURE__ */ jsxs4(ToastPrimitive.Provider, {
     children: [
-      /* @__PURE__ */ jsxs3(Label, {
+      /* @__PURE__ */ jsxs4(ToastRoot, {
+        ...props,
         children: [
-          "Passo ",
-          currentStep,
-          " de ",
-          size
+          /* @__PURE__ */ jsx5(ToastTitle, {
+            children: title
+          }),
+          description && /* @__PURE__ */ jsx5(ToastDescription, {
+            children: description
+          }),
+          /* @__PURE__ */ jsx5(ToastClose, {
+            children: /* @__PURE__ */ jsx5(X_esm_default, {
+              weight: "light",
+              size: 20
+            })
+          })
         ]
       }),
-      /* @__PURE__ */ jsx4(Steps, {
-        css: { "--steps-size": size },
-        children: Array.from({ length: size }, (_, i) => i + 1).map((step) => /* @__PURE__ */ jsx4(Step, {
-          active: currentStep >= step
-        }, step))
-      })
+      /* @__PURE__ */ jsx5(ToastViewPort, {})
     ]
   });
 }
-MultiStep.displayName = "MultiStep";
+Toast2.displayName = "Toast";
+
+// src/components/Tooltip/index.tsx
+import * as TooltipPrimitive from "@radix-ui/react-tooltip";
+
+// src/components/Tooltip/styles.ts
+import * as Tooltip from "@radix-ui/react-tooltip";
+var TooltipContent = styled(Tooltip.Content, {
+  padding: "$3 $4",
+  background: "$gray900",
+  color: "$gray100",
+  fontFamily: "$default",
+  fontSize: "$sm",
+  borderRadius: "$xs",
+  fontWeight: "$medium",
+  filter: "drop-shadow(4px 16px 24px rgba(0, 0, 0, 0.25))"
+});
+var TooltipArrow = styled(Tooltip.Arrow, {
+  fill: "$gray900"
+});
+
+// src/components/Tooltip/index.tsx
+import { jsx as jsx6, jsxs as jsxs5 } from "react/jsx-runtime";
+function Tooltip2({ content, children, ...props }) {
+  return /* @__PURE__ */ jsx6(TooltipPrimitive.Provider, {
+    children: /* @__PURE__ */ jsxs5(TooltipPrimitive.Root, {
+      ...props,
+      children: [
+        /* @__PURE__ */ jsx6(TooltipPrimitive.Trigger, {
+          asChild: true,
+          children
+        }),
+        /* @__PURE__ */ jsx6(TooltipPrimitive.Portal, {
+          children: /* @__PURE__ */ jsxs5(TooltipContent, {
+            children: [
+              /* @__PURE__ */ jsx6(TooltipArrow, {}),
+              content
+            ]
+          })
+        })
+      ]
+    })
+  });
+}
+Tooltip2.displayName = "Tooltip";
 export {
   Avatar2 as Avatar,
   Box,
@@ -738,5 +1026,7 @@ export {
   MultiStep,
   Text,
   TextArea,
-  TextInput
+  TextInput,
+  Toast2 as Toast,
+  Tooltip2 as Tooltip
 };
